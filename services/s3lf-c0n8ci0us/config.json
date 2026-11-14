@@ -1,0 +1,10 @@
+{
+  "project": "S3lf-c0n8ci0us",
+  "slug": "s3lf-c0n8ci0us",
+  "port": 8090,
+  "namespace": "cognitive-mesh",
+  "repo": "credkellarboop/S3lf-c0n8ci0us",
+  "function": "Rust auto-cognitive AI reasoning engine, Sol-Plex frameworks, recursive self-correcting loops.",
+  "mode": "simulation-first",
+  "live_actions": "HOLD"
+}

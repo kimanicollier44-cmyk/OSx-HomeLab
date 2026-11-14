@@ -1,0 +1,10 @@
+{
+  "project": "PLAN-TEST-DEPLOY-PROMOTE-MONETIZE",
+  "slug": "creator-pipeline",
+  "port": 8120,
+  "namespace": "creator-pipeline-mesh",
+  "repo": "ddkellar01/PLAN-TEST-DEPLOY-PROMOTE-MONETIZE",
+  "function": "Creator pipeline: PLAN, TEST, DEPLOY, PROMOTE, MONETIZE in one interface.",
+  "mode": "simulation-first",
+  "live_actions": "HOLD"
+}

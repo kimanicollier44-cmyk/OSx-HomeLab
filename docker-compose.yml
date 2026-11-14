@@ -1,0 +1,92 @@
+# OSx-HomeLab — unified core + custom framework stack (blueprint /opt/homelab)
+# Dry-run reference: validate with `python main.py checks`. Real deployment is a HOLD gate.
+services:
+  gitea:
+    image: gitea/gitea:1.22
+    restart: unless-stopped
+    ports: ["3000:3000"]
+    volumes: ["./services/gitea:/config"]
+  minio:
+    image: minio/minio:latest
+    restart: unless-stopped
+    ports: ["9000:9000"]
+    volumes: ["./services/minio:/config"]
+  nats:
+    image: nats:2.10
+    restart: unless-stopped
+    ports: ["4222:4222"]
+    volumes: ["./services/nats:/config"]
+  zot:
+    image: ghcr.io/project-zot/zot-linux-amd64:latest
+    restart: unless-stopped
+    ports: ["5000:5000"]
+    volumes: ["./services/zot:/config"]
+  infisical:
+    image: infisical/infisical:latest
+    restart: unless-stopped
+    ports: ["8080:80"]
+    volumes: ["./services/infisical:/config"]
+  qdrant:
+    image: qdrant/qdrant:latest
+    restart: unless-stopped
+    ports: ["6333:6333"]
+    volumes: ["./services/qdrant:/config"]
+  valkey:
+    image: valkey/valkey:8
+    restart: unless-stopped
+    ports: ["6379:6379"]
+    volumes: ["./services/valkey:/config"]
+  osx:
+    image: credkellar/osx:latest
+    restart: unless-stopped
+    ports: ["8115:8115"]
+    volumes: ["./services/osx:/config"]
+    profiles: ["custom"]
+  s3lf-c0n8ci0us:
+    image: credkellar/s3lf-c0n8ci0us:latest
+    restart: unless-stopped
+    ports: ["8090:8090"]
+    volumes: ["./services/s3lf-c0n8ci0us:/config"]
+    profiles: ["custom"]
+  agents-xcrops:
+    image: credkellar/agents-xcrops:latest
+    restart: unless-stopped
+    ports: ["8110:8110"]
+    volumes: ["./services/agents-xcrops:/config"]
+    profiles: ["custom"]
+  quantum-traderx:
+    image: credkellar/quantum-traderx:latest
+    restart: unless-stopped
+    ports: ["8130:8130"]
+    volumes: ["./services/quantum-traderx:/config"]
+    profiles: ["custom"]
+  autonomous-tech-infrastructure:
+    image: credkellar/autonomous-tech-infrastructure:latest
+    restart: unless-stopped
+    ports: ["8105:8105"]
+    volumes: ["./services/autonomous-tech-infrastructure:/config"]
+    profiles: ["custom"]
+  advanced-medical-institution:
+    image: credkellar/advanced-medical-institution:latest
+    restart: unless-stopped
+    ports: ["8095:8095"]
+    volumes: ["./services/advanced-medical-institution:/config"]
+    profiles: ["custom"]
+  crypto-recovery-forensics:
+    image: credkellar/crypto-recovery-forensics:latest
+    restart: unless-stopped
+    ports: ["8100:8100"]
+    volumes: ["./services/crypto-recovery-forensics:/config"]
+    profiles: ["custom"]
+  creator-pipeline:
+    image: credkellar/creator-pipeline:latest
+    restart: unless-stopped
+    ports: ["8120:8120"]
+    volumes: ["./services/creator-pipeline:/config"]
+    profiles: ["custom"]
+  sysadmin-footprint-mask:
+    image: credkellar/sysadmin-footprint-mask:latest
+    restart: unless-stopped
+    ports: ["8125:8125"]
+    volumes: ["./services/sysadmin-footprint-mask:/config"]
+    profiles: ["custom"]

@@ -1,0 +1,17 @@
+{
+  "project": "OSx",
+  "builder": "OSx/ (The Forge)",
+  "operating_system": "custom-os-root/",
+  "port": 8115,
+  "namespace": "osx-mesh",
+  "repo": "credkellar/OSx",
+  "architecture": {
+    "core": "immutable-core microkernel",
+    "features": [
+      "per-app sandboxing",
+      "kernel-bypass networking",
+      "hardware security enclave",
+      "on-device AI daemon"
+    ]
+  }
+}

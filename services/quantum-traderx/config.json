@@ -1,0 +1,10 @@
+{
+  "project": "Quantum-TraderX",
+  "slug": "quantum-traderx",
+  "port": 8130,
+  "namespace": "quantum-trader-mesh",
+  "repo": "ddkellar01/Quantum-TraderX",
+  "function": "Algorithmic execution: crypto, stocks, forex, sports prediction markets, ML, risk enforcement.",
+  "mode": "simulation-first",
+  "live_actions": "HOLD"
+}

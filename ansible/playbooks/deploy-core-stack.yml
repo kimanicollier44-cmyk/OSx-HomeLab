@@ -1,0 +1,47 @@
+---
+- name: Deploy Complete OSx-HomeLab Engineering & Autonomous Stack
+  hosts: core_superserver
+  become: true
+  vars:
+    app_root: /opt/homelab
+    services_root: /opt/homelab/services
+  tasks:
+    - name: Ensure all service directories exist
+      ansible.builtin.file:
+        path: "{{ services_root }}/{{ item }}"
+        state: directory
+        mode: '0750'
+      loop:
+        - gitea
+        - minio
+        - nats
+        - zot
+        - infisical
+        - qdrant
+        - valkey
+        - osx
+        - s3lf-c0n8ci0us
+        - agents-xcrops
+        - quantum-traderx
+        - autonomous-tech-infrastructure
+        - advanced-medical-institution
+        - crypto-recovery-forensics
+        - creator-pipeline
+        - sysadmin-footprint-mask
+    - name: Deploy S3lf-c0n8ci0us TOML configuration
+      ansible.builtin.copy:
+        dest: "{{ services_root }}/s3lf-c0n8ci0us/config.toml"
+        mode: '0640'
+        content: |
+          [engine]
+          name = "S3lf-c0n8ci0us"
+          core = "rust-high-velocity"
+          framework = "Sol-Plex"
+          feedback_loop = "recursive-self-correcting"
+          zero_latency = true
+    - name: Deploy OSx Forge & Custom Microkernel configuration
+      ansible.builtin.copy:
+        dest: "{{ services_root }}/osx/config.json"
+        mode: '0640'
+        content: |
+          {"project": "OSx", "builder": "OSx/ (The Forge)", "operating_system": "custom-os-root/", "architecture": {"core": "immutable-core microkernel", "features": ["per-app sandboxing", "kernel-bypass networking", "hardware security enclave", "on-device AI daemon"]}}

@@ -1,0 +1,10 @@
+{
+  "project": "sysadmin-footprint-mask",
+  "slug": "sysadmin-footprint-mask",
+  "port": 8125,
+  "namespace": "sysadmin-mask-mesh",
+  "repo": "ddkellar01/sysadmin-footprint-mask",
+  "function": "Local sysadmin mask and footprint sanitizer: isolated low-telemetry workspaces, volatile history.",
+  "mode": "simulation-first",
+  "live_actions": "HOLD"
+}

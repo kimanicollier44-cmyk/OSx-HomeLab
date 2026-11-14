@@ -1,0 +1,10 @@
+{
+  "project": "Autonomous-Tech-Infrastructure-Platform",
+  "slug": "autonomous-tech-infrastructure",
+  "port": 8105,
+  "namespace": "autonomous-rnd-mesh",
+  "repo": "ddkellar01/Autonomous-Tech-Infrastructure-Platform",
+  "function": "Private R&D engine: CS, data science, AI, cybersecurity scouting, sandbox testing, CI/CD.",
+  "mode": "simulation-first",
+  "live_actions": "HOLD"
+}

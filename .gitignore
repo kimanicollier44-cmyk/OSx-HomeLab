@@ -1,0 +1,6 @@
+.env
+*.log
+patches/talosconfig
+terraform/*.tfstate*
+__pycache__/
+.pytest_cache/

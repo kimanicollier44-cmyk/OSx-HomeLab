@@ -1,0 +1,10 @@
+{
+  "project": "Advanced-Natural-Medical-Institution",
+  "slug": "advanced-medical-institution",
+  "port": 8095,
+  "namespace": "advanced-medical-mesh",
+  "repo": "ddkellar01/Advanced-Natural-Medical-Institution",
+  "function": "Phytochemical research, bioassay testing, personalized regimen generation, crash recovery.",
+  "mode": "simulation-first",
+  "live_actions": "HOLD"
+}

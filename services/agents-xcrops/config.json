@@ -1,0 +1,10 @@
+{
+  "project": "Agents-xCrops",
+  "slug": "agents-xcrops",
+  "port": 8110,
+  "namespace": "agents-xcrops-mesh",
+  "repo": "ddkellar01/Agents-xCrops",
+  "function": "Banking agent master orchestrator: Front 45% / Middle 30% / Back 25%, 100 to 250,000 units, simulation-first.",
+  "mode": "simulation-first",
+  "live_actions": "HOLD"
+}

@@ -1,0 +1,25 @@
+---
+- name: Orchestrate Talos Linux Kubernetes Cluster Deployment
+  hosts: localhost
+  gather_facts: false
+  vars:
+    cluster_name: osx-homelab-k8s
+    talosconfig_path: "{{ playbook_dir }}/../../patches/talosconfig"
+  tasks:
+    - name: Check if talosconfig already exists
+      ansible.builtin.stat: {path: "{{ talosconfig_path }}"}
+      register: talosconfig_stat
+    - name: Generate Talos machine configurations if missing
+      ansible.builtin.command:
+        cmd: "talosctl gen config {{ cluster_name }} https://10.1.10.31:6443 --output-dir {{ playbook_dir }}/../../patches"
+      when: not talosconfig_stat.stat.exists
+    - name: Apply machine configuration to control plane nodes
+      ansible.builtin.command:
+        cmd: "talosctl apply-config --insecure --node {{ hostvars[item]['node_ip'] }} --file {{ playbook_dir }}/../../patches/controlplane.yaml"
+      loop: "{{ groups['talos_cluster'] }}"
+      ignore_errors: true
+    - name: Bootstrap Kubernetes Control Plane
+      ansible.builtin.command:
+        cmd: "talosctl bootstrap --nodes 10.1.10.31 --talosconfig {{ talosconfig_path }}"
+      register: bootstrap_result
+      ignore_errors: true

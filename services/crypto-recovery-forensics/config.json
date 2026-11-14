@@ -1,0 +1,10 @@
+{
+  "project": "Crypto-Recovery-Forensics",
+  "slug": "crypto-recovery-forensics",
+  "port": 8100,
+  "namespace": "crypto-forensics-mesh",
+  "repo": "ddkellar01/Crypto-Recovery-Forensics",
+  "function": "Educational blockchain forensics: key derivation, UTXO/EVM tracing, contract security, ledger transparency.",
+  "mode": "simulation-first",
+  "live_actions": "HOLD"
+}
