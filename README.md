@@ -1,4 +1,4 @@
-![OSx-HomeLab cover](assets/cover.png)
+![OSx-HomeLab cover](cover.png)
 
 # OSx-HomeLab 🏠🖥️
 
@@ -272,7 +272,7 @@ Imagine your computers are a small city. This project is the city's map and rule
 
 ```
 📁 OSx-HomeLab/
-├── 🖼️ assets/cover.png          # cover image (uploaded by the owner — binary, not in the App push)
+├── 🖼️ cover.png                  # cover image (repo root, uploaded by the owner)
 ├── 🐍 main.py                    # validator + planner (stdlib only)
 ├── 🧪 tests/test_homelab.py      # pytest suite (12 tests)
 ├── 🐳 docker-compose.yml         # core services + 9 engines (custom profile)
@@ -297,4 +297,4 @@ Imagine your computers are a small city. This project is the city's map and rule
         🥷 sysadmin-footprint-mask/   # config.json each
 ```
 
-*Built 2026-11-13 from Darion Kellar's OSx-HomeLab blueprint PDF. OSx itself: [credkellar/OSx](https://github.com/credkellar/OSx). Cover: `assets/cover.png` — the PNG is binary, so it is uploaded to the repo by the owner; the README header above points at it.*
+*Built 2026-11-13 from Darion Kellar's OSx-HomeLab blueprint PDF. OSx itself: [credkellar/OSx](https://github.com/credkellar/OSx). Cover: `cover.png` at the repo root — the PNG is binary, so it was uploaded to the repo by the owner; the README header above points at it.*
