@@ -1,4 +1,4 @@
-![OSx-HomeLab cover](cover.png)
+![OSx-HomeLab cover](OSx-HomeLab%20cover.png)
 
 # OSx-HomeLab 🏠🖥️
 
